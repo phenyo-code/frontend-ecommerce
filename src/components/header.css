@@ -1,0 +1,511 @@
+/* Ensure the Montserrat font is applied */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body.menu-open {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent body scrolling when the menu is open */
+}
+
+/* Prevent scrolling when the side menu is open */
+.no-scroll {
+  overflow: hidden;
+}
+
+
+/* Logo Style */
+.logo-text {
+  font-family: 'Montserrat', sans-serif;  /* Using Montserrat font */
+  font-size: 22px;  /* Adjust size as needed */
+  font-weight: bolder;
+  letter-spacing: 3px;
+  background: linear-gradient(20deg, #000000, #ff6347);  /* Gradient colors */
+  background-clip: text;
+  -webkit-background-clip: text;  /* Ensures the gradient applies to the text */
+  color: transparent;  /* Makes the text itself transparent so the gradient shows */
+  text-transform: uppercase;  /* Makes the logo text uppercase */
+  text-decoration: none;  /* Removes underline */
+  background-size: 400% 400%;  /* Expands the gradient to allow movement */
+  animation: gradientShift 4s ease infinite;  /* Animation for the gradient movement */
+  margin-left: 20px;
+}
+
+/* Animation for gradient movement */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 100%;
+  }
+  25% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Remove underline from all anchor tags */
+a {
+  text-decoration: none;
+}
+
+/* General Header Styles */
+.header {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0; /* Removed all padding */
+  box-sizing: border-box;
+  margin-right: 20px;
+
+}
+
+/* Top Row Styles */
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0; /* Ensure no margin */
+}
+
+.logo img {
+  height: 24px; /* Adjust the size as needed */
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 23px;  /* Increased gap for spacing */
+  justify-content: flex-end; /* Align icons to the right */
+  margin-right: 20px;
+}
+
+.header-icons .fa-shopping-cart{
+  font-size: 24px;
+  color: #575757;
+  font-weight: 100;
+  position: relative;
+  text-decoration: none;
+}
+
+.header-icons .fa-heart{
+  font-size: 24px;
+  font-weight: 100;
+  color: #575757;
+  position: relative;
+  text-decoration: none;
+}
+
+.header-icons .search-icon {
+  font-size: 27px; /* Adjust size if it looks misaligned */
+  color: #555; /* Optional: a different color */
+}
+
+ .fa-x {
+  font-size: 30px;
+  font-weight: 100;
+  position: relative;
+  text-decoration: none;
+  stroke-width: 1.5; /* Make the strokes bolder */
+  height: 30px; /* Control the height of the icon */
+  width: auto; /* Maintain aspect ratio */
+  stroke: #ff6347; /* Default color for stroke-based icons */
+}
+
+.header-icons .icon:hover {
+  color: #f57c00;
+}
+
+.menu-icon {
+  font-size: 30px; /* Make the icon larger */
+  line-height: 10px; /* Adjust line height for spacing */
+  stroke-width: 1.5; /* Make the strokes bolder */
+  height: 30px; /* Control the height of the icon */
+  width: auto; /* Maintain aspect ratio */
+  stroke: #ff6347; /* Default color for stroke-based icons */
+}
+
+.header-icons .menu-icon {
+  font-size: 30px; /* Make the icon larger */
+  line-height: 10px; /* Adjust line height for spacing */
+  stroke-width: 1.5; /* Make the strokes bolder */
+  height: 30px; /* Control the height of the icon */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.search-icon {
+  font-size: 22px; /* Make the icon larger */
+  line-height: 50px; /* Adjust line height for spacing */
+  stroke-width: 1.5; /* Make the strokes bolder */
+  height: 30px; /* Control the height of the icon */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.header-icons .heart-icon {
+  font-size: 24px; /* Make the icon larger */
+  line-height: 10px; /* Adjust line height for spacing */
+  stroke-width: 1; /* Make the strokes bolder */
+  height: 30px; /* Control the height of the icon */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.cart-icon {
+  font-size: 24px; /* Make the icon larger */
+  line-height: 10px; /* Adjust line height for spacing */
+  stroke-width: 1; /* Make the strokes bolder */
+  height: 30px; /* Control the height of the icon */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.menu-icon:hover {
+  color: #ff6347; /* Hover effect */
+  transform: scale(1.1); /* Slight scaling on hover */
+}
+
+.header-top-row .icon {
+  font-size: 25px; /* Adjust size */
+  color: #333; /* Icon color */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center; /* Ensure vertical alignment */
+  font-size: 24px; /* Make the icon larger */
+  line-height: 10px; /* Adjust line height for spacing */
+  stroke-width: 1.3; /* Make the strokes bolder */
+}
+
+.header-top-row .icon:hover {
+  color: #ff6347; /* Change color on hover */
+}
+
+/* Cart count badge */
+/* Container for the cart icon */
+.cart-icon-wrapper {
+  position: relative; /* Make this container relative to position the badge */
+}
+
+/* Cart count badge */
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #ff6347; /* Badge background */
+  color: #fff; /* Badge text color */
+  font-size: 0.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 0.3rem 0.1rem;
+  line-height: 1;
+  min-width: 15px; /* Ensure a minimum size for the badge */
+  text-align: center; /* Center the text inside the badge */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Individual Styling for Bars Icon */
+.header-icons .fa-bars {
+  font-size: 26px; /* Adjust the size of the bars icon */
+  color: #b9b9b9; /* Change the color */
+  cursor: pointer; /* Make the icon clickable */
+  font-weight: 50;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Remove hover background color */
+.category-tab:hover {
+  background-color: transparent; /* Ensure no background is applied */
+  color: #FF8801; /* Keep text color unchanged */
+}
+
+/* Remove hover background color */
+.filter-tab:hover {
+  background-color: transparent; /* Ensure no background is applied */
+  color: #FF8801; /* Keep text color unchanged */
+}
+
+/* Second Row: Categories */
+.header-categories-row {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  white-space: nowrap;
+  gap: 58px;  /* Adds space between the tabs */
+  border-bottom: 1px solid #ddd;
+  margin-left: 20px;
+  padding: 0; /* Ensures no extra white space */
+}
+
+/* Optionally, ensure that category tab items have no margin */
+.header-categories-row .category-tab {
+  margin: 0; /* Added to remove any default margin */
+}
+
+/* Active tab styles */
+.category-tab.active, .filter-tab.active {
+  color: #000000; /* Keep active text color */
+  font-size: 12px;
+  font-weight: 1000;
+  opacity: 1;
+}
+
+/* Hover effects for category and filter tabs */
+.category-tab:hover, .filter-tab:hover {
+  background-color: transparent; /* No background change on hover */
+  color: #000000; /* Keep text color unchanged on hover */
+}
+
+/* Ensure active tabs remain highlighted when not hovered */
+.category-tab.active:hover, .filter-tab.active:hover {
+  color: #000000; /* Keep active text color */
+  font-size: 12px;
+  font-weight: 1000;
+  opacity: 1;
+}
+
+.category-tab {
+  padding: 8px 1px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  color: #000000;
+  opacity: 0.5;
+  text-transform: uppercase;  /* Apply all caps */
+}
+
+/* Third Row: Filters */
+.header-filters-row {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  white-space: nowrap;
+  gap: 20px;
+  padding: 5px 0; /* Removed padding to reduce space */
+  background-color: #fff;
+  color: #fff;
+  margin: 0;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent the items from wrapping to the next line */
+}
+
+.filter-tab {
+  padding: 4px 8px;
+  background: none;
+  border: none;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #9c9c9c;
+  margin: 0; /* Added to remove any default margin */
+  text-transform: uppercase;  /* Apply all caps */
+  margin-left: 13px;
+}
+/* Side Menu Styles */
+.side-menu {
+  position: fixed;
+  top: 46px;  /* Adjust this value to position it below the second header row */
+  left: -100%; /* Initially positioned off-screen to the left */
+  width: 100%;
+  height: calc(100% - 43px);  /* Full height minus the height of the top header rows */
+  background-color: #ffffff; /* Changed to white */
+  color: #000000; /* Changed to black */
+  transition: left 0.3s ease; /* Smooth sliding effect */
+  z-index: 1000; /* Ensure the side menu is above other content */
+  padding: 0; /* Remove padding to prevent any side space */
+  box-sizing: border-box; /* Ensures width includes padding */
+  overflow-y: auto; /* Allow scrolling in the side menu */
+  margin: 0;
+}
+
+/* Ensure Footer inside the side menu is stretched */
+.side-menu footer {
+  margin: 0; /* Remove any margin */
+  padding: 20px 0; /* Adjust padding for the footer */
+  width: 100%; /* Full width */
+  background-color: #f8f8f8; /* Set footer background color */
+  box-sizing: border-box; /* Prevent any unwanted overflow due to padding */
+}
+
+/* Style for the UL */
+.side-menu ul {
+  margin: 25px 0;  /* Adds margin at the top and bottom of the list */
+  padding: 0; /* Removes padding from the list */
+}
+
+.wrapper.menu-open {
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu a,
+.side-menu button {
+  text-decoration: none;
+  color: #000000; /* Changed text color to black */
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease; /* Added smooth transition for text color */
+}
+
+.side-menu a:hover,
+.side-menu button:hover {
+  color: #000000; /* Slightly darker black for hover text */
+}
+
+
+/* When the menu is open */
+.side-menu.open {
+  left: 0; /* Slide the menu in from the left */
+}
+
+.side-menu .close-btn {
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Side Menu Links */
+.side-menu ul {
+  display: flex;
+  flex-direction: column; /* Stack the items vertically */
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu li {
+  margin: 20px 0;
+  flex-grow: 1;  /* This allows the span to take up available space */
+}
+
+.side-menu li  {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  flex-grow: 1;  /* This allows the span to take up available space */
+}
+
+/* Side Menu List Item Style */
+/* Side Menu List Item Style */
+.side-menu ul li {
+  display: flex;
+  justify-content: flex-start; /* Align the text to the left */
+  align-items: center; /* Vertically center the text */
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0; /* Horizontal line after each item */
+  position: relative; /* Needed for the absolute positioning of the arrow */
+  flex-grow: 1;  /* This allows the span to take up available space */
+}
+
+/* Style for the forward arrow icon */
+.side-menu ul li i {
+  position: absolute; /* Position the arrow icon at the far right */
+  right: 20px; /* Add some spacing from the right edge */
+  font-size: 12px; /* Make the arrow smaller */
+}
+
+
+.side-menu button {
+  text-decoration: none;
+  color: #000000 !important; /* Force text color to black */
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease; /* Smooth transition for text color */
+  z-index: 10;
+}
+
+/* For mobile views */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+.side-menu a {
+  color: #000000; /* Specific to side menu */
+    flex-grow: 1;  /* This allows the span to take up available space */
+}
+
+.footer a {
+  color: #ffffff; /* Specific to footer */
+
+}
+
+/* Exclude horizontal line from Footer */
+.side-menu footer {
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+  background-color: #424242;
+  box-sizing: border-box;
+  border-bottom: none; /* Ensure no border below footer */
+}
+
+.footer {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  margin-bottom: 15px;
+}
+
+/* Content inside the footer */
+.side-menu .footer-content {
+  padding: 0 20px; /* Optional: Add controlled padding if necessary */
+  text-align: center; /* Center the footer content */
+}
+
+/* Specific styles for links and social icons in the footer */
+.side-menu .footer-links ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove bullet points */
+}
+
+/* Style for the list items */
+.side-menu ul li {
+  margin-bottom: 15px;
+  padding-bottom: 10px; /* Space between list items and horizontal line */
+  border-bottom: 1px solid #e0e0e0; /* Horizontal line after each item */
+}
+
+/* Optional: Style for the logout button to remove border */
+.side-menu ul li .logout-btn {
+  border-bottom: none; /* Remove the border from the logout button */
+}
+
+.side-menu ul li:last-child {
+  border-bottom: none; /* Remove the border from the last item */
+}
+
+.hero {
+  margin: 0 !important;
+  padding: 0 !important;
+
+}
+/* Footer Styling */
+footer {
+  margin: 0;  /* Removed any margin */
+  padding: 20px;
+}

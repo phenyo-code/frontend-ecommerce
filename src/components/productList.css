@@ -1,0 +1,85 @@
+/* Ensure the product list layout remains intact */
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: one product per row */
+  gap: 4px; /* Slightly larger gap for readability */
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  justify-items: stretch; /* Stretch items to fill columns */
+  align-items: start; /* Avoid centering issues */
+}
+
+.list-header {
+  margin-left: 10px; /* Consistent left margin */
+  font-weight: 500;
+}
+
+/* Responsive styles for medium screens */
+@media (min-width: 320px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* Two products per row */
+    gap: 6px; /* Slightly larger gap */
+  }
+}
+
+/* For larger screens, 4 products per row */
+@media (min-width: 1024px) {
+  .product-list {
+    grid-template-columns: repeat(4, 1fr); /* Four products per row */
+    gap: 12px; /* Increased gap for better spacing */
+    padding: 0 10px; /* Reduced side padding */
+  }
+}
+
+/* Make sure products container takes full width and align items */
+.products {
+  display: grid; /* Grid layout for product items */
+  grid-template-columns: 1fr; /* Default: one product per row */
+  gap: 4px; /* Increased gap for spacing */
+  width: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+/* Specific styles for product name and price */
+.product-name {
+  font-size: 1.1rem; /* Slightly larger font for product names */
+  margin: 0;
+  padding: 0;
+  font-weight: bold; /* Make the product name bold */
+}
+
+.product-price {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive styles for products */
+@media (min-width: 320px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr); /* Two products per row */
+    gap: 8px;
+    margin-left: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr); /* Three products per row */
+    gap: 10px; /* Moderate gap */
+  }
+}
+
+@media (min-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr); /* Four products per row */
+    gap: 12px; /* Consistent gap for large screens */
+    padding: 20px 10px;
+    margin-left: 30px;
+  }
+}

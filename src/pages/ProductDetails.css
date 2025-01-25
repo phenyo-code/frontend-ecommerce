@@ -1,0 +1,259 @@
+  .product-page {
+    margin-top: 62px;
+    background-color: #f1f1f1;
+  }
+
+
+.prod-image-wrapper {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    max-height: 650px; /* Set a maximum height */
+    margin-bottom: -50px; /* Adjust spacing as needed */
+    position: relative;
+}
+
+.prod-image-wrapper img {
+    object-fit: contain; /* Ensures the image fits without cropping */
+    max-height: 100%; /* Restrict the image height within the wrapper */
+    max-width: 100%; /* Ensure the width doesn't exceed the container */
+}
+
+.prod-image-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.prod-image {
+    flex: 0 0 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+    position: relative;
+}
+
+/* Ensuring image-count stays on top, even when scrolling */
+.image-count {
+  position: relative;  /* Sticks it to the top of the images */
+  bottom: 2px; /* Positioned at the bottom */
+  left: 50%; 
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  max-width: fit-content;
+  font-size: 10px;
+  z-index: 10; /* Ensure it stays above images */
+  pointer-events: none; /* Keeps it visible but not clickable */
+}
+
+
+  
+
+  .flame {
+    color: #ff7700;
+  }
+
+  .size-option.disabled {
+    color: rgb(75, 75, 75);
+    cursor: not-allowed;
+    pointer-events: none; /* Prevent clicks */
+    opacity: 0.3; /* Fade the disabled option */
+  }
+  
+
+  .prod-details {
+    padding: 13px;
+    margin-top: 13px;
+  }
+
+  .price-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Small gap between the price items */
+    margin-top: 15px;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff7700; /* Red color for the discount */
+  }
+
+  .discount-percent {
+    color: #ff8012; /* Orange color for the discount */
+    font-size: 0.7rem;
+    font-weight: 800;
+    background-color: #ffdab9;; /* Light orange background */
+    padding: 2px 4px; /* Add padding to increase the background size */
+    margin-left: 7px;
+    padding-left: 4px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  
+  .discount-text {
+    display: inline-block;
+    color: #ff7700; /* Orange color for the discount */
+    font-size: 0.6rem;
+    font-weight: 500;
+    padding: 3px 8px; /* Match the padding of .discount-percent */
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .size-text {
+    margin-top: 0;
+    font-weight: 500;
+  }
+
+  .original-price {
+    text-decoration: line-through;
+    font-size: 0.8rem;
+    color: #7f8c8d; /* Gray for original price */
+  }
+
+  .prod-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+    margin-top: 0;
+    margin: 0;
+    left: 0;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden;    /* Hides any overflowing text */
+    text-overflow: ellipsis; /* Adds '...' at the end if text overflows */
+    width: 100%; /* Ensures the element takes up available space */
+  }  
+
+  .size-selector {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
+  
+  
+  .size-selector label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 13px;
+  }
+  
+  .size-text {
+    margin-left: 13px;
+  }
+
+  .size-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    margin-left: 13px;
+  }
+  
+  .size-option {
+    padding: 5px 21px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .size-option:hover {
+    border-color: #ff7700;
+  }
+  
+  .size-option.selected {
+    background-color: #000000;
+    color: white;
+    border-color: #535353;
+  }
+  
+  .add-button {
+    display: flex;
+    align-items: center; /* Align items on the same row */
+    margin-bottom: 13px;
+    gap: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    margin-top: 20px;
+  }
+  
+  .add-to-cart {
+    background-color: black; /* Button background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Adjust padding */
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* Font size for button */
+    margin-right: 10px; /* Space between button and heart icon */
+  }
+  
+  .errorText {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+  
+  .error-border {
+    border-color: red;
+  }
+
+  .wish-list {
+    font-size: 35px; /* Heart icon size */
+    font-weight: 100;
+    color: rgb(117, 117, 117); /* Color of the heart icon */
+    margin-left: 15px;
+    cursor: pointer; /* Add pointer cursor for interactivity */
+  }
+
+  .wish-list.added {
+    color: rgb(0, 0, 0); /* Color when the product is in the wishlist */
+  }
+  
+  .wish-list:hover {
+    color: #000000; /* Hover effect */
+  }
+  
+
+  .size-quantity {
+   margin-left: 15px;
+   border: 1px black;
+   max-width: fit-content;
+   color: #535353;
+   padding: 2px 5px;
+   border-radius: 10px;
+  }
+
+  .cart-dot {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6600; /* Green color */
+    border-radius: 50%;
+    animation: moveUp 1s ease-out forwards;
+    z-index: 10;
+  }
+  
+  @keyframes moveUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-150px);
+      opacity: 0;
+    }
+  }
+  
+
+  

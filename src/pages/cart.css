@@ -1,0 +1,323 @@
+.cart-page {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  margin-top: 60px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-item {
+  overflow: hidden;
+  border: 0.5px solid rgb(100, 100, 100);
+  border-radius: 7px;
+  
+}
+
+.cart-item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
+.cart-item-image {
+  width: 80%;
+  aspect-ratio: 1 / 1; /* Ensures the image is a square */
+  object-fit: cover;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0px;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 40px;
+}
+
+.cart-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.item-name {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #333;
+
+}
+
+.remove-btn {
+  font-size: 15px;
+  cursor: pointer;
+  color: #adadad;
+  transition: color 0.2s ease-in-out;
+  border-radius: 5px;
+  padding: 5px 8px;
+  background-color: #f1f1f1;
+  position:  absolute;
+  right: 30px;
+  border: 0.5px solid #f1f1f1;
+}
+
+.remove-btn:hover {
+  color: #bdbdbd;
+}
+
+.cart-item-size {
+  font-size: 10px;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 2px;
+  background-color: #f1f1f1;
+  padding: 3px 8px;
+  border-radius: 20px;
+  display: inline-block;
+  max-width: fit-content;
+}
+
+
+.cart-item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.cart-item-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-item-price .current-price {
+  color: #ff7700;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.cart-item-price .original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.cart-quantity {
+  color:#333;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns controls to the right */
+  gap: 5px;
+  width: 30%;
+  position:  absolute;
+  right: 30px;
+  border: 0.5px solid #f1f1f1;
+  max-width: fit-content;
+  border-radius: 6px;
+  gap: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.controlls {
+  border: 0.1px solid #f1f1f1;
+  background-color: #f1f1f1;
+  font-size: 12px;
+  font-weight: 100px;
+  padding: 3px 6px;
+  color: #adadad;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.quantity-controls button:hover {
+  background-color: #adadad;
+}
+
+.quantity-controls span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cart-item-discount {
+  font-size: 5px;
+  background-color: #ff7700;
+  max-width: fit-content;
+  color: #ffffff;
+  position:  relative;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.cart-total {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cart-total h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.cart-total button {
+  padding: 10px 20px;
+  background-color: #ff7b00;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cart-total button:hover {
+  background-color: #06ac00;
+}
+
+.shop-now{
+  background-color: black;
+  color: white;
+  padding: 9px 60px;
+  border-radius: 20px;
+}
+
+.cart-empty {
+  align-items: center;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 20px 30px 40px;
+  border-radius: 10px;
+  margin-left: 0;
+}
+
+.cart-login {
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between; /* Ensure items are spaced apart */
+  align-items: center; /* Align items vertically */
+}
+
+.totals-info {
+  display: flex;
+  flex-direction: column; /* Stack total and savings vertically */
+  align-items: flex-end; /* Align text to the left */
+  margin-left: 37%;
+  margin-top: 14px;
+  margin-right: 5px;
+}
+
+/* Adjust for extra-large screens */
+@media (min-width: 1440px) {
+  .totals-info {
+    display: flex;
+    flex-direction: column; /* Stack total and savings vertically */
+    align-items: flex-end; /* Align text to the left */
+    margin-left: 37%;
+    margin-top: 14px;
+    margin-right: 5px;
+    margin-left: 90%; /* Further increase for wide screens */
+  }
+}
+
+/* Adjust for extra-large screens */
+@media (min-width: 1024px) {
+  .totals-info {
+    display: flex;
+    flex-direction: column; /* Stack total and savings vertically */
+    align-items: flex-end; /* Align text to the left */
+    margin-left: 37%;
+    margin-top: 14px;
+    margin-right: 2px;
+    margin-left: 70%; /* Further increase for wide screens */
+  }
+}
+
+.total-amount {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+}
+
+.savings-text {
+  font-size: 11px;
+  color: #ff7b00;
+  font-weight: bold;
+  margin-top: -9px; /* Small gap between total and savings */
+}
+
+.checkout {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 28px;
+  background-color: #2c2c2c;
+  color: rgb(238, 238, 238);
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Adjust for extra-large screens */
+@media (min-width: 1440px) {
+  .total-amount {
+    display: flex;
+    flex-direction: column; /* Stack total and savings vertically */
+    align-items: flex-end; /* Align text to the left */
+    margin-top: 14px;
+    margin-right: 5px;
+    margin-left: 90%; /* Further increase for wide screens */
+  }
+}
+
+/* Adjust for extra-large screens */
+@media (min-width: 1024px) {
+  .total-amount {
+    margin-top: 14px;
+    margin-right: 2px;
+    margin-left: 90%; /* Further increase for wide screens */
+  }
+}
